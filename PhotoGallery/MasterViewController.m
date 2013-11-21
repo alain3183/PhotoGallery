@@ -17,6 +17,8 @@
 
 @implementation MasterViewController
 
+@synthesize list;
+
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -25,13 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    self.title = @"Products";
+    NSArray *listArray = [[NSArray alloc] initWithObjects:@"iPhone", @"iPad", @"iMac", @"MacBook Air", nil];
+    self.list = listArray;
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
