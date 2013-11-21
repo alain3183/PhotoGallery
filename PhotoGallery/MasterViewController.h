@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MasterViewController : UITableViewController
+{
+    NSArray *list;
+}
+@property (strong, nonatomic) NSArray * list;
 
 @end
